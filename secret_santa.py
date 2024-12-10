@@ -56,7 +56,7 @@ def generate_html_page(gifter: str, giftee: str, dir: str):
             'GIFTER', gifter).replace('GIFTEE', giftee))
 
 
-def find_giftee(gifters: list, dir: str, debug: bool):
+def find_giftees(gifters: list, dir: str, debug: bool):
     random.shuffle(gifters)
     giftees = gifters.copy()
     gifters_who_found_a_giftee = []
@@ -109,7 +109,7 @@ def main():
     os.mkdir(now.strftime(dir))
     print('Who:')
     print(f'{who}\n')
-    find_giftee(who, dir, debug)
+    find_giftees(who, dir, debug)
 
 
 if __name__ == '__main__':
